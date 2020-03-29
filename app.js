@@ -21,6 +21,10 @@ new Vue({
       //console.log(event);
       this.x = event.offsetX;
       this.y = event.offsetY;
+    },
+    infoAlert: function(event){
+      //event.preventDefault();
+      alert("This is a link click!");
     }
   }
 });
