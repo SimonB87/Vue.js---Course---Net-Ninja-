@@ -3,15 +3,24 @@ console.log("testing 123");
 new Vue({
   el: "#vue-app",
   data: {
-    name: "Simon",
-    surName: "Bury",
-    websiteLink: "http://www.google.com",
-    myHomeSite: "http://www.simonburyan.cz",
-    elementLink: "<a href=\"http://www.SimonBuryan.cz\">SimonBuryan.cz</a>"
+    age: 31,
+    x: "-",
+    y: "-"
   },
   methods: {
-    greet: function(time) {
-      return "Good " + time + " " + this.name;
+    add: function(){
+      this.age = this.age + 2;
+    },
+    subtract: function(){
+      this.age = this.age - 2;
+    },
+    change: function(diff){
+      this.age += diff; 
+    },
+    updateXY: function(event){
+      //console.log(event);
+      this.x = event.offsetX;
+      this.y = event.offsetY;
     }
   }
 });

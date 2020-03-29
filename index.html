@@ -10,16 +10,18 @@
 </head>
 <body>
   <div id="vue-app">
-    <h1> {{ greet("day") }} </h1>
-    <p>Full name:{{ name }} {{surName}}</p>
-    <p>About: {{name + " " + surName }} </p>
-    <a v-bind:href="websiteLink">google</a>
-    <br>
-    <a :href="myHomeSite">SimonBuryan.cz</a>
-    <br>
-    <input type="text" name="" id="" :value="surName">
+    <h1> Events </h1>
 
-    <div v-html="elementLink"></div>
+    <button v-on:click="add">Add Year</button>
+    <button v-on:click="subtract">Remove Year</button>
+    <br>
+    <button @dblclick="change(+10)">Increase 10 years</button>
+    <button @dblclick="change(-10)">Decrease 10 years</button>
+    <br>
+    <p class="age">My age is {{age}} </p>
+
+    <h2>Canvas</h2>
+    <div id="canvas" v-on:mousemove="updateXY"> {{x}} and {{y}} </div>
 
   </div>
   <script src="app.js"></script>

@@ -6,3 +6,10 @@
 #vue-app{
   background: lightgray;
 }
+
+#canvas{
+  width: 60vw;
+  padding: 200px 20px;
+  text-align: center;
+  border: 1px solid #333;
+}
