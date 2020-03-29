@@ -8,14 +8,15 @@ Vue.config.keyCodes = {
 new Vue({
   el: "#vue-app",
   data: {
-
+    name: "-",
+    age: "-"
   },
   methods: {
     logName: function(){
-      console.log("You entered name - on enter.");
+      //console.log("You entered name - on enter.");
     },
     logAge: function(){
-      console.log("You entered age - on alt enter.");
+      //console.log("You entered age - on alt enter.");
     },
   }
 });

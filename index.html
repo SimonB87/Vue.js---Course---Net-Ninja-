@@ -14,10 +14,16 @@
 
     <label for="name">Name:</label>
     <!-- Fire function after pressing the "v" key -->
-    <input type="text" name="" id="name" v-on:keyup.v="logName">
+
+    <input type="text" name="" id="name" v-model="name">
+    <input type="text" name="" id="name" v-bind:value="name">
+    <span> Output: {{name}} </span>
+    <br>
     
     <label for="age">Age:</label>
-    <input type="number" name="" id="age" v-on:keyup.alt.enter="logAge">
+    <input type="number" name="" id="age" v-model="age">
+    <input type="number" name="" id="age" v-bind:value="age">
+    <span> Output: {{age}} </span>
 
   </div>
   <script src="app.js"></script>
