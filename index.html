@@ -10,20 +10,19 @@
 </head>
 <body>
   <div id="vue-app">
-    <h1> Events </h1>
+    <h1> Keyboard Events </h1>
 
-    <button v-on:click.once="add">Add 2 Years</button>
-    <button v-on:click="subtract">Remove 2 Years</button>
+    <label for="name">Name:</label>
+    <!-- Fire function after pressing the "v" key -->
+    <input type="text" name="" id="name" v-model="name">
+    <input type="text" name="" id="name" v-bind:value="name">
+    <span> Output: {{name}} </span>
     <br>
-    <button @dblclick="change(+10)">Increase 10 years</button>
-    <button @dblclick="change(-10)">Decrease 10 years</button>
-    <br>
-    <p class="age">My age is {{age}} </p>
-
-    <a @click.prevent="infoAlert" href="http://www.simonburyan.cz">Link</a>
-
-    <h2>Canvas</h2>
-    <div id="canvas" v-on:mousemove="updateXY"> {{x}} and {{y}} </div>
+    
+    <label for="age">Age:</label>
+    <input type="number" name="" id="age" v-model="age">
+    <input type="number" name="" id="age" v-bind:value="age">
+    <span> Output: {{age}} </span>
 
   </div>
   <script src="app.js"></script>
