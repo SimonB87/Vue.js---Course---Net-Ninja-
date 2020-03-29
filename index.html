@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vue.js</title>	
+  <link rel='icon' href='img/favicon.ico' type='image/x-icon'/ >
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/vue@2.6.11/dist/vue.js"></script>
+</head>
+<body>
+  <div id="vue-app">
+    <h1> {{ greet("day") }} </h1>
+    <p>Full name:{{ name }} {{surName}}</p>
+    <p>About: {{name + " " + surName }} </p>
+    <a v-bind:href="websiteLink">google</a>
+    <br>
+    <a :href="myHomeSite">SimonBuryan.cz</a>
+    <br>
+    <input type="text" name="" id="" :value="surName">
+
+    <div v-html="elementLink"></div>
+
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
