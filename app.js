@@ -1,31 +1,22 @@
 console.log("testing 123");
 
+Vue.config.keyCodes = {
+  f1: 112,
+  v: 86
+}
+
 new Vue({
   el: "#vue-app",
   data: {
-    age: 31,
-    x: "-",
-    y: "-"
+
   },
   methods: {
-    add: function(){
-      this.age = this.age + 2;
+    logName: function(){
+      console.log("You entered name - on enter.");
     },
-    subtract: function(){
-      this.age = this.age - 2;
+    logAge: function(){
+      console.log("You entered age - on alt enter.");
     },
-    change: function(diff){
-      this.age += diff; 
-    },
-    updateXY: function(event){
-      //console.log(event);
-      this.x = event.offsetX;
-      this.y = event.offsetY;
-    },
-    infoAlert: function(event){
-      //event.preventDefault();
-      alert("This is a link click!");
-    }
   }
 });
 
