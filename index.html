@@ -11,15 +11,25 @@
 <body>
   <div id="vue-app">
 
-    <h1> Using Computed properties </h1>
+    <h1> Dynamic CSS </h1>
 
-    <button v-on:click="aa++">Add to AA</button>
-    <button v-on:click="bb++">Add to BB</button>
-    <p> AA - {{ aa }} </p>
-    <p> BB - {{ bb }} </p>
-    <!-- Computed property watches only a variable it is declared to. Take out the parenthesis to use a computed property -->
-    <p> NewAge + AA = {{ addToAa }} </p>
-    <p> NewAge + BB = {{ addToBb }} </p>
+    <h2> Example 1a </h2>
+
+    <div v-bind:class="{red:true}">Has class red.</div>
+    <div v-bind:class="{red:false}">Has not class red.</div>
+    <div v-bind:class="{red:false, orangeBack:false}">Has not class red, nor coral.</div>
+    <div v-bind:class="{red:true, orangeBack: true}">Has class red and coral.</div>
+
+    <h2> Example 1b </h2>
+   <!--  Take the avaliable true/false value -->
+    <div v-bind:class="{available: available}">Div - available</div>
+    <div v-bind:class="{available: notAvailable}">Div - notAvailable</div>
+
+    <h2> Example 2 - Taxi driver</h2>
+    <button v-on:click="nearBy = !nearBy">Toggle nearby</button>
+    <button v-on:click="available = !available">Toggle available</button>
+    <div v-bind:class="compClasses"><span>Thomas</span></div>
+
 
   </div>
   <script src="app.js"></script>
