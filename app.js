@@ -9,7 +9,7 @@ new Vue({
   el: "#vue-app",
   data: {
     name: "-",
-    age: "-"
+    age: "0"
   },
   methods: {
     logName: function(){
