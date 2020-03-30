@@ -11,25 +11,24 @@
 <body>
   <div id="vue-app">
 
-    <h1> Dynamic CSS </h1>
+    <h1> Conditions </h1>
+    <button v-on:click="error = !error" >Toggle Error</button>
+    <button v-on:click="success = !success">Toggle Success</button>
 
-    <h2> Example 1a </h2>
+    <!-- The two paragraps are connected into one if-else boolean pair. 
+         The elements gets removed from DOM completely and replaced by a comment.
+         After that it is put back to the same place. -->
+    <p v-if="error">There has been an error.</p>
+    <p v-else-if="success">A success!</p>
 
-    <div v-bind:class="{red:true}">Has class red.</div>
-    <div v-bind:class="{red:false}">Has not class red.</div>
-    <div v-bind:class="{red:false, orangeBack:false}">Has not class red, nor coral.</div>
-    <div v-bind:class="{red:true, orangeBack: true}">Has class red and coral.</div>
+    <h1> Vue show </h1>
+    <button v-on:click="errorDisplay = !errorDisplay" >Toggle Error</button>
+    <button v-on:click="successDisplay = !successDisplay">Toggle Success</button>
 
-    <h2> Example 1b </h2>
-   <!--  Take the avaliable true/false value -->
-    <div v-bind:class="{available: available}">Div - available</div>
-    <div v-bind:class="{available: notAvailable}">Div - notAvailable</div>
-
-    <h2> Example 2 - Taxi driver</h2>
-    <button v-on:click="nearBy = !nearBy">Toggle nearby</button>
-    <button v-on:click="available = !available">Toggle available</button>
-    <div v-bind:class="compClasses"><span>Thomas</span></div>
-
+    <!-- The two paragraps are connected into one if-else boolean pair.
+         The elements gets display none when hidden. -->
+    <p v-show="errorDisplay">There has been an error.</p>
+    <p v-show="successDisplay">A success!</p>
 
   </div>
   <script src="app.js"></script>

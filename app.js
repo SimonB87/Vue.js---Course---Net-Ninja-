@@ -1,20 +1,17 @@
 new Vue({
   el: "#vue-app",
   data: {
-    available: false,
-    notAvailable: false,
-    nearBy: false
+    error: false,
+    success: false,
+    
+    errorDisplay: false,
+    successDisplay: false
   },
   methods: {
     
   },
   computed: {
-    compClasses: function(){
-      return {
-        available: this.available,
-        nearBy: this.nearBy
-      }
-    }
+
   }
 });
 
