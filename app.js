@@ -20,11 +20,11 @@ new Vue({
   computed: {
     addToAa: function(){
       console.log("computed property addToAa was run");
-      return this.a + this.age;
+      return this.aa + this.age;
     },
     addToBb: function(){
       console.log("computed property addToBb was run");
-      return this.b + this.age;
+      return this.bb + this.age;
     },
   }
 });
