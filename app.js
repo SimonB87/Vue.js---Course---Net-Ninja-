@@ -1,22 +1,30 @@
-console.log("testing 123");
-
-Vue.config.keyCodes = {
-  f1: 112,
-  v: 86
-}
-
 new Vue({
   el: "#vue-app",
   data: {
-    name: "-",
-    age: "0"
+    age: 30,
+    a: 0,
+    b: 0,
+    aa: 0,
+    bb: 0
   },
   methods: {
-    logName: function(){
-      //console.log("You entered name - on enter.");
+    addToA: function(){
+      console.log("addToA was run");
+      return this.a + this.age;
     },
-    logAge: function(){
-      //console.log("You entered age - on alt enter.");
+    addToB: function(){
+      console.log("addToB was run");
+      return this.b + this.age;
+    },
+  },
+  computed: {
+    addToAa: function(){
+      console.log("computed property addToAa was run");
+      return this.a + this.age;
+    },
+    addToBb: function(){
+      console.log("computed property addToBb was run");
+      return this.b + this.age;
     },
   }
 });
