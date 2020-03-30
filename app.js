@@ -2,20 +2,18 @@ new Vue({
   el: "#vue-app",
   data: {
     age: 30,
-    a: 0,
-    b: 0,
     aa: 0,
     bb: 0
   },
   methods: {
-    addToA: function(){
+    /*addToA: function(){
       console.log("addToA was run");
       return this.a + this.age;
     },
     addToB: function(){
       console.log("addToB was run");
       return this.b + this.age;
-    },
+    },*/
   },
   computed: {
     addToAa: function(){
