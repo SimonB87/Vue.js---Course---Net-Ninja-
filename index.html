@@ -10,20 +10,16 @@
 </head>
 <body>
   <div id="vue-app">
-    <h1> Keyboard Events </h1>
 
-    <label for="name">Name:</label>
-    <!-- Fire function after pressing the "v" key -->
+    <h1> Using Computed properties </h1>
 
-    <input type="text" name="" id="name" v-model="name">
-    <input type="text" name="" id="name" v-bind:value="name">
-    <span> Output: {{name}} </span>
-    <br>
-    
-    <label for="age">Age:</label>
-    <input type="number" name="" id="age" v-model="age">
-    <input type="number" name="" id="age" v-bind:value="age">
-    <span> Output: {{age}} </span>
+    <button v-on:click="aa++">Add to AA</button>
+    <button v-on:click="bb++">Add to BB</button>
+    <p> AA - {{ aa }} </p>
+    <p> BB - {{ bb }} </p>
+    <!-- Computed property watches only a variable it is declared to. Take out the parenthesis to use a computed property -->
+    <p> NewAge + AA = {{ addToAa }} </p>
+    <p> NewAge + BB = {{ addToBb }} </p>
 
   </div>
   <script src="app.js"></script>
