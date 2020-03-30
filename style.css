@@ -7,9 +7,34 @@
   background: lightgray;
 }
 
-#canvas{
-  width: 60vw;
-  padding: 200px 20px;
-  text-align: center;
-  border: 1px solid #333;
+.red{
+  color: red;
+}
+
+.orangeBack{
+  background-color: orange;
+}
+
+span{
+  background: red;
+  display: inline-block;
+  padding: 1rem;
+  color: #fff;
+  margin: 1rem 0;
+}
+
+.available span{
+  background: green;
+  position: relative;
+}
+
+.nearBy span:after{
+  content: ">> nearby";
+  position: absolute;
+  left: 6rem;
+  top: 0.5rem;
+  width: 5rem;
+  padding: 0.5rem;
+  background: green;
+  border-radius: 5px;
 }
