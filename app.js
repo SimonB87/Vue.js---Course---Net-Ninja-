@@ -1,20 +1,43 @@
-new Vue({
-    el: '#vue-app',
+const oneInstance = new Vue({
+    el: '#vue-app-one',
     data: {
-        health: 100,
-        ended: false
+        title: "Vue App One",
     },
     methods: {
-        punch: function(){
-            this.health -= 10;
-            if ( this.health <= 0 ){
-                this.ended = true;
-            }
-        },
-        restart: function(){
-            this.health = 100;
-            this.ended = false;
+        
+    },
+    computed: {
+        greet: function(){
+            return "Hello from " + this.title;
         }
+    }
+});
+
+const twoInstance = new Vue({
+    el: '#vue-app-two',
+    data: {
+        title: "Vue App Two",
+    },
+    methods: {
+        changeTitle: function(){
+            oneInstance.title = "Title changed by " + this.title;
+        }
+    },
+    computed: {
+        greet: function(){
+            return "Cheers from " + this.title;
+        }
+    }
+});
+
+const threeInstance = new Vue({
+    el: '#vue-app-three',
+    data: {
+        title: "Vue App three",
+        name: ""
+    },
+    methods: {
+    
     },
     computed: {
 
