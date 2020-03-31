@@ -12,42 +12,6 @@ body {
 }
 
 .pageTitle{
-    color: crimson;
+    color: darkblue;
     text-align: center;
-    margin-bottom: 0;
-}
-
-
-#bag{
-    width: 20vh;
-    height: 50vh;
-    min-width: 200px;
-    min-height: 500px;
-    margin: 0 auto;
-    background: url(img/bag.png) center no-repeat;
-    background-size: 80%;
-}
-
-#bag.burst{
-    background-image: url(img/bag-burst.png);
-}
-
-#bag-health{
-    width: 200px;
-    border: 2px solid #000;
-    margin: 0 auto 20px auto;
-}
-
-#bag-health div{
-    height: 20px;
-    background: crimson;
-}
-
-#controls{
-    display: flex;
-    justify-content: center;
-}
-
-button{
-    margin: 5px;
 }
