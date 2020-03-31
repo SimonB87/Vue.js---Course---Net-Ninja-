@@ -4,44 +4,50 @@
 }*/
 
 #vue-app{
-  background: lightgray;
+  /*background: lightgray;*/
 }
 
-.red{
-  color: red;
+body {
+    font-family: arial, sans-serif;
 }
 
-.orangeBack{
-  background-color: orange;
+.pageTitle{
+    color: crimson;
+    text-align: center;
+    margin-bottom: 0;
 }
 
-span{
-  -webkit-transition: background-color 0.5s ease-out 0.5s;
-  -moz-transition: background-color 0.5s ease-out 0.5s;
-  -o-transition: background-color 0.5s ease-out 0.5s;
-  transition: background-color 0.5s ease-out 0.5s;
+
+#bag{
+    width: 20vh;
+    height: 50vh;
+    min-width: 200px;
+    min-height: 500px;
+    margin: 0 auto;
+    background: url(img/bag.png) center no-repeat;
+    background-size: 80%;
 }
 
-span{
-  background: red;
-  display: inline-block;
-  padding: 1rem;
-  color: #fff;
-  margin: 1rem 0;
+#bag.burst{
+    background-image: url(img/bag-burst.png);
 }
 
-.available span{
-  background: green;
-  position: relative;
+#bag-health{
+    width: 200px;
+    border: 2px solid #000;
+    margin: 0 auto 20px auto;
 }
 
-.nearBy span:after{
-  content: ">> nearby";
-  position: absolute;
-  left: 6rem;
-  top: 0.5rem;
-  width: 5rem;
-  padding: 0.5rem;
-  background: green;
-  border-radius: 5px;
+#bag-health div{
+    height: 20px;
+    background: crimson;
+}
+
+#controls{
+    display: flex;
+    justify-content: center;
+}
+
+button{
+    margin: 5px;
 }
