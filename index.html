@@ -4,29 +4,20 @@
         <meta charset="utf-8">
         <title>VueJS Tutorials</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="styles.css" rel="stylesheet" />
+        <link href="style.css" rel="stylesheet" />
         <script src="https://unpkg.com/vue"></script>
     </head>
     <body>
         <h1>Multiple Vue Instances</h1>
 
         <div id="vue-app-one">
-            <h2> {{title}} </h2>
-            <p> {{greet}} </p>
+            <h2> Vue App One</h2>
+            <greeting></greeting>
         </div>
 
         <div id="vue-app-two">
-            <h2> {{title}} </h2>
-            <p> {{greet}} </p>
-            <button v-on:click="changeTitle"> Change App One Title </button>
-        </div>
-
-        <div id="vue-app-three">
-            <h2> {{title}} </h2> 
-            
-            <label for="name">Name:</label>
-            <input type="text" name="name" id="name" v-model="name">
-            <p>You entered name: {{name}} </p>
+            <h2> Vue App Two</h2>
+            <greeting></greeting>
         </div>
 
     </body>

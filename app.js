@@ -1,45 +1,21 @@
-const oneInstance = new Vue({
+Vue.component("greeting", {
+    template: "<p>Hey this is {{name}}. <button v-on:click='changeName'>Change name!</button></p>",
+    data: function(){
+        return {
+            name: "Simon"
+        }
+    },
+    methods: {
+        changeName: function(){
+            this.name = "Veronika";
+        }
+    }
+});
+
+new Vue({
     el: '#vue-app-one',
-    data: {
-        title: "Vue App One",
-    },
-    methods: {
-        
-    },
-    computed: {
-        greet: function(){
-            return "Hello from " + this.title;
-        }
-    }
 });
 
-const twoInstance = new Vue({
-    el: '#vue-app-two',
-    data: {
-        title: "Vue App Two",
-    },
-    methods: {
-        changeTitle: function(){
-            oneInstance.title = "Title changed by " + this.title;
-        }
-    },
-    computed: {
-        greet: function(){
-            return "Cheers from " + this.title;
-        }
-    }
-});
-
-const threeInstance = new Vue({
-    el: '#vue-app-three',
-    data: {
-        title: "Vue App three",
-        name: ""
-    },
-    methods: {
-    
-    },
-    computed: {
-
-    }
+new Vue({
+    el: '#vue-app-two',    
 });
