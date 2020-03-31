@@ -3,24 +3,29 @@
     <head>
         <meta charset="utf-8">
         <title>VueJS Tutorials</title>
-        <link href="styles.css" rel="stylesheet" />
+        <link href="style.css" rel="stylesheet" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="https://unpkg.com/vue"></script>
     </head>
     <body>
+        <h1 class="pageTitle">Prašti ten pytel!</h1>
         <div id="vue-app">
-            <!-- bag image -->
-            <div id="bag" v-bind:class="{ burst: ended }"></div>
+
+            <!-- game control buttons -->
+            <div id="controls">
+                <button v-on:click="punch" v-show="!ended">Praštit!</button>
+                <button v-on:click="restart">Restart</button>
+            </div>
 
             <!-- bag health bar -->
             <div id="bag-health">
                 <div v-bind:style="{ width: health + '%' }"></div>
             </div>
 
-            <!-- game control buttons -->
-            <div id="controls">
-                <button v-on:click="punch" v-show="!ended">Punch</button>
-                <button v-on:click="restart">Restart</button>
-            </div>
+            <!-- bag image -->
+            <div id="bag" v-bind:class="{ burst: ended }"></div>
+
+
         </div>
     </body>
 
