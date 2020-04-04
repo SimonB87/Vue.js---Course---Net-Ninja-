@@ -9,8 +9,12 @@
     </head>
     <body>
         <h1 class="pageTitle">Vue blank</h1>
+        <h2>Refs</h2>
         <div id="vue-app">
-
+            <input type="text" name="" id="" ref="input">
+            <button v-on:click="readRefs">Submit</button>
+            <p>Your fav food is: {{outputValue}} </p>
+            <div ref="test">Hello there</div>
         </div>
     </body>
 
