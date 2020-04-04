@@ -1,0 +1,20 @@
+1) npm instal -g vue-cli
+
+? Project name vuejs-playlist
+? Project description A Vue.js project
+? Author SimonB87 <buryans@gmail.com>
+? License MIT
+? Use sass? No
+
+   vue-cli · Generated "vuejs-playlist".
+
+   To get started:
+
+     cd vuejs-playlist
+     npm install
+     npm run dev
+
+Project is running at http://localhost:8080/
+webpack output is served from /dist/
+404s will fallback to /index.html
+{ parser: "babylon" } is deprecated; we now treat it as { parser: "babel" }.
